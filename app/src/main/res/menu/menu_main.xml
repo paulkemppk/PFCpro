@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.gonzo.pfcpro.MainActivity">
+
+
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="102"
+        android:icon="@mipmap/outline_home_white_48"
+        android:title="@string/home_m" />
+    <item
+        android:id="@+id/action_leistung"
+        android:orderInCategory="104"
+        android:icon="@mipmap/power"
+        android:title="@string/leistung_m" />
+    <item
+        android:id="@+id/action_kapazität"
+        android:orderInCategory="109"
+        android:title="@string/kapazit_t_m"
+        android:icon="@mipmap/kap"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_verdrosselung"
+        android:orderInCategory="102"
+        android:icon="@mipmap/verd"
+        android:title="@string/verdrosselung_m" />
+    <item
+        android:id="@+id/action_ck"
+        android:orderInCategory="110"
+        android:icon="@mipmap/ck"
+        android:title="@string/c_k_wert_m" />
+    <item
+        android:id="@+id/action_bill"
+        android:orderInCategory="110"
+        android:icon="@mipmap/bill"
+        android:title="@string/ew_rechnung_m" />
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="110"
+        android:icon="@mipmap/info"
+        android:title="@string/info" />
+</menu>

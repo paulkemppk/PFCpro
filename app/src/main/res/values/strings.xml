@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">CAPAG</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_calc_power">CalcPower</string>
+    <string name="title_activity_calc_verd">calc_verd</string>
+    <string name="title_activity_calc_q">calcQ</string>
+    <!-- Main -->
+    <string name="blindleistungberechnung">Blindleistungsberechnung</string>
+    <string name="verdrosselungs_frequenz">Verdrosselungs-frequenz</string>
+    <string name="kapazit_t">Kapazität</string>
+    <string name="c_k_wert">C/K-Wert</string>
+    <string name="ew_rechnung">EW-Rechnung</string>
+    <string name="direkt_kompensation">Direkt-kompensation</string>
+    <string name="info">Info</string>
+    <!-- Direktkompensation -->
+    <string name="leistung_kw">Leistung [kW]</string>
+    <string name="berechnen">Berechnen</string>
+    <string name="cos_phi">cos phi</string>
+    <string name="blindleistung_kvar">Blindleistung [kvar]</string>
+    <string name="ziel_cos_phi">Ziel cos phi</string>
+    <string name="berechnung_leistung">Direktkompensation</string>
+    <!-- Kapazität -->
+    <string name="blindleistungsberechnung_aus_kapazit_t">Blindleistungsberechnung aus Kapazität</string>
+    <string name="stern">Stern</string>
+    <string name="spannung_v">Spannung [V]</string>
+    <string name="dreieck">Dreieck</string>
+    <string name="berechnen_2">Berechnen</string>
+    <string name="kapazit_t_uf_2">Kapazität [uF]</string>
+    <string name="frequenz_hz">Frequenz [Hz]</string>
+    <string name="blindleistung_kvar_2">Blindleistung [kvar]</string>
+    <string name="_7">7%</string>
+    <string name="_5">5%</string>
+    <string name="_14">14%</string>
+    <!-- Verdrosselung -->
+    <string name="berechnung_des_verdrosselungsfaktors">Berechnung des Verdrosselungsfaktors</string>
+    <string name="berechnen_3">Berechnen</string>
+    <string name="verdrosselung">Verdrosselung [%]</string>
+    <string name="kapazit_t_uf">Kapazität [uF]</string>
+    <string name="induktivit_t_mh">Induktivität [mH]</string>
+    <string name="frequenz_hz_2">Frequenz [Hz]</string>
+    <!-- C/K-Wert -->
+    <string name="berechnung_c_k_wert">Berechnung C/K-Wert</string>
+    <string name="stromwandler_pri">Stromwandler Pri.</string>
+    <string name="stromwandler_sek">Stromwandler Sek.</string>
+    <string name="berechnen_4">Berechnen</string>
+    <string name="c_k_wert_2">C/K Wert</string>
+    <string name="kleinste_stufe_kvar">Kleinste Stufe [kvar]</string>
+    <!-- Info -->
+    <string name="blindleistungberechnung_info">Info Blindleistungsberechnung</string>
+
+    <string name="verdrosselungs_frequenz2">"Verdrosselungsfrequenz"</string>
+    <string name="textviewverdrosselung">Berechnung der Verdrosselungsfrequenz aus der Induktivität und der Kapazität.\nKapazität: Kapazität eines Kondensators in uF\nInduktivität: Induktivität der Seriedrossel in mH\nFrequenz: Nennfrequenz der Installation</string>
+
+    <string name="direkt_kompensation2">Direktkompensation</string>
+    <string name="textviewdirektkompensation">Berechnung der Blindleistung anhand der Wirkleistung und Cos Phi.\nLeistung: Wirkleistung des Verbrauchers gemäss Typenschild in kW\ncos phi: Cos Phi des Verbrachers gemäss Typenschild\nZiel cos phi: Gewünschter Cos Phi nach Kompensation</string>
+
+    <string name="kapazitaet">Kapazität</string>
+    <string name="textviewkapazitaet">Berechnung der Blindleistung anhand der Kapazität\nStern/Dreieck: Schaltungsart\n5%,7%,14%: Verdrosselungsfaktor\nSpannung: Nennspannung am Kondensator\nKapazität: Kapazität eines Kondensators\nFrequenz: Nennfrequenz der Installation</string>
+
+    <string name="c_k_wert3">C/K-Wert</string>
+    <string name="textviewck">Berechnung des C/K-Wertes für die Einstellung der ersten Stufe bei Blindleistungsreglern.\nStromwandler Pri.: Stromwandlerwert auf der Primärseite zB. 1000A\nStromwandler Sek.: Stromwandlerwert auf der Sekundärseite z.B. 5A\nKleinste Stufe: Kleinste Stufe der installierten Kompensation in kvar</string>
+
+    <string name="ew_rechnung2">EW-Rechnung</string>
+    <string name="textviewew">Berechnung der benötigten Blindleistng anhand der EW-Rechnung</string>
+
+
+    <string name="verdrosselungsfrequenz">Verdrosselungsfrequenz</string>
+    <string name="textview">Berechnung der Blindleistung anhand der EW-Rechnung.</string>
+
+
+    <string name="info2">Info</string>
+    <string name="textviewDirekt">TextView</string>
+
+
+    <!-- Menu -->
+    <string name="ew_rechnung_m">EW Rechnung</string>
+    <string name="c_k_wert_m">C/K Wert</string>
+    <string name="kapazit_t_m">Kapazität</string>
+    <string name="verdrosselung_m">Verdrosselung</string>
+    <string name="leistung_m">Leistung</string>
+    <string name="home_m">Home</string>
+
+    <!-- NavView -->
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+
+
+</resources>
