@@ -2,6 +2,7 @@ package com.example.gonzo.pfcpro;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Button infoBtn;
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
+    private Button openHomepage;
+    private Button openLinkedIn;
 
 
     @Override
@@ -60,6 +63,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ckBtn = findViewById(R.id.buttonCk);
         billBtn = findViewById(R.id.buttonBill);
         infoBtn = findViewById(R.id.buttonInfo);
+
+        openHomepage = (Button) findViewById(R.id.homepage);
+        openLinkedIn = (Button) findViewById(R.id.linkedin);
+
+        openHomepage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
+                startActivity(browserIntent);
+            }
+        });
+
+        openLinkedIn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/company/cap-ag/"));
+                startActivity(browserIntent);
+            }
+        });
 
         verdBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

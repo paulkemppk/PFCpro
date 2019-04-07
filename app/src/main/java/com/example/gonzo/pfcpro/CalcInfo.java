@@ -1,6 +1,7 @@
 package com.example.gonzo.pfcpro;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -18,6 +19,8 @@ public class CalcInfo extends AppCompatActivity implements NavigationView.OnNavi
 
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
+    private Button openHomepage;
+    private Button openLinkedIn;
 
 
     @Override
@@ -40,6 +43,24 @@ public class CalcInfo extends AppCompatActivity implements NavigationView.OnNavi
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        openHomepage = (Button) findViewById(R.id.homepage);
+        openLinkedIn = (Button) findViewById(R.id.linkedin);
+
+        openHomepage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
+                startActivity(browserIntent);
+            }
+        });
+
+        openLinkedIn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/company/cap-ag/"));
+                startActivity(browserIntent);
+            }
+        });
 
     }
 

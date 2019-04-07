@@ -13,6 +13,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.webkit.CookieManager;
@@ -21,6 +22,7 @@ import android.webkit.URLUtil;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +40,8 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
     private ViewTreeObserver.OnScrollChangedListener mOnScrollChangedListener;
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
+    private Button openHomepage;
+    private Button openLinkedIn;
 
 
 
@@ -74,6 +78,25 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        openHomepage = (Button) findViewById(R.id.homepage);
+        openLinkedIn = (Button) findViewById(R.id.linkedin);
+
+        openHomepage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
+                startActivity(browserIntent);
+            }
+        });
+
+        openLinkedIn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/company/cap-ag/"));
+                startActivity(browserIntent);
+            }
+        });
 
 
         webb = (WebView) findViewById(R.id.web1);
