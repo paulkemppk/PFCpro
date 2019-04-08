@@ -10,7 +10,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_cap"
-        android:label="CAPAG"
+        android:label="PFCPro"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >

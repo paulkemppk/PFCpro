@@ -47,12 +47,13 @@
     <string name="kleinste_stufe_kvar">Kleinste Stufe [kvar]</string>
     <!-- Info -->
     <string name="blindleistungberechnung_info">Info Blindleistungsberechnung</string>
+    <string name="info_blindstrom">Die App dient der Berechnung diverser Parameter, welche zur Auslegung und Einstellung einer Blindstromkompensation benötigt werden.</string>
 
     <string name="verdrosselungs_frequenz2">"Verdrosselungsfrequenz"</string>
     <string name="textviewverdrosselung">Berechnung der Verdrosselungsfrequenz aus der Induktivität und der Kapazität.\nKapazität: Kapazität eines Kondensators in uF\nInduktivität: Induktivität der Seriedrossel in mH\nFrequenz: Nennfrequenz der Installation</string>
 
     <string name="direkt_kompensation2">Direktkompensation</string>
-    <string name="textviewdirektkompensation">Berechnung der Blindleistung anhand der Wirkleistung und Cos Phi.\nLeistung: Wirkleistung des Verbrauchers gemäss Typenschild in kW\ncos phi: Cos Phi des Verbrachers gemäss Typenschild\nZiel cos phi: Gewünschter Cos Phi nach Kompensation</string>
+    <string name="textviewdirektkompensation">Berechnung der Blindleistung anhand der Wirkleistung und Cos Phi.\nLeistung: Wirkleistung des Verbrauchers gemäss Typenschild in kW\ncos phi: Cos Phi des Verbrauchers gemäss Typenschild\nZiel cos phi: Gewünschter Cos Phi nach Kompensation</string>
 
     <string name="kapazitaet">Kapazität</string>
     <string name="textviewkapazitaet">Berechnung der Blindleistung anhand der Kapazität.\nStern/Dreieck: Schaltungsart\n5%,7%,14%: Verdrosselungsfaktor\nSpannung: Nennspannung am Kondensator\nKapazität: Kapazität eines Kondensators\nFrequenz: Nennfrequenz der Installation</string>
@@ -86,7 +87,7 @@
     <!-- NavView -->
     <string name="open">open</string>
     <string name="close">close</string>
-    <string name="info_blindstrom">Die App dient der Berechung diverser Paramerter, welche zur Auslegung und Einstellung einer Blindstromkompensation benötigt werden</string>
+
     <string name="rechtliche_hinweise">Rechtliche Hinweise</string>
     <string name="verantwortlich_f_r_den_inhalt">Verantwortlich für den Inhalt</string>
     <string name="textview_verantwortlich">Rechtliche Hinweise</string>
