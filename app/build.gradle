@@ -1,9 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'capag'
+            keyPassword 'xL35-LUA4'
+            storeFile file('C:/Users/Matthias/Downloads/deployment_cert.der')
+            storePassword 'xL35-LUA4'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.gonzo.pfcpro"
+        applicationId "com.capag.friedli.pfcpro"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1

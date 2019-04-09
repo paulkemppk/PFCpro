@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorFontBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.gonzo.pfcpro.calcQ"
+    tools:context=".calcQ"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp"
     tools:showIn="@layout/activity_calc_q">
@@ -239,7 +239,7 @@
         android:layout_width="100dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="10dp"
         android:textAlignment="textEnd"
         android:textColor="@color/colorFontGrey"
         android:textSize="24sp"

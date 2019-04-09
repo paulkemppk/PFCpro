@@ -1,4 +1,4 @@
-package com.example.gonzo.pfcpro;
+package com.capag.friedli.pfcpro;
 
 import org.junit.Test;
 

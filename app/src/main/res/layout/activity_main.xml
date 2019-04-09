@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer"
-    tools:context="com.example.gonzo.pfcpro.MainActivity">
+    tools:context="com.capag.friedli.pfcpro.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gonzo.pfcpro">
+    package="com.capag.friedli.pfcpro">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         >
         <activity
-            android:name=".MainActivity"
+            android:name="com.capag.friedli.pfcpro.MainActivity"
             android:label="CAPAG"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
@@ -25,64 +25,64 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CalcPower"
+            android:name="com.capag.friedli.pfcpro.CalcPower"
             android:label=""
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gonzo.pfcpro.MainActivity" />
+                android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
         <activity
-            android:name=".calc_verd"
+            android:name="com.capag.friedli.pfcpro.calc_verd"
             android:label=""
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gonzo.pfcpro.MainActivity" />
+                android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
         <activity
-            android:name=".CalcCK"
+            android:name="com.capag.friedli.pfcpro.CalcCK"
             android:label=""
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gonzo.pfcpro.MainActivity" />
+                android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
         <activity
-            android:name=".calcQ"
+            android:name="com.capag.friedli.pfcpro.calcQ"
             android:label=""
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gonzo.pfcpro.MainActivity" />
+                android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
         <activity
-            android:name=".CalcBill"
+            android:name="com.capag.friedli.pfcpro.CalcBill"
             android:label=""
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gonzo.pfcpro.MainActivity" />
+                android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
         <activity
-            android:name=".CalcInfo"
+            android:name="com.capag.friedli.pfcpro.CalcInfo"
             android:label=""
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gonzo.pfcpro.MainActivity" />
+                android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
 
     </application>

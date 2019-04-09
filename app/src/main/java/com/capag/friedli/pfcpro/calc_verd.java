@@ -1,4 +1,4 @@
-package com.example.gonzo.pfcpro;
+package com.capag.friedli.pfcpro;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,32 +16,36 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+public class calc_verd extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-public class CalcPower extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-
-    private Button calcPowerbtn;
-    private TextView blindleistung;
-    private EditText leistung;
-    private EditText cosphi;
-    private EditText zcosphi;
-    private calculateKomp calcPowr;
+    private Button calcVerdbtn;
+    private TextView ergebnissVerdrosselung;
+    private EditText kap;
+    private EditText freq;
+    private EditText ind;
+    private calculateKomp calcVerd;
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
     private Button openHomepage;
     private Button openLinkedIn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calc_power);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_calc_verd);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_power);
+        calcVerdbtn = (Button) findViewById(R.id.verdBtn);
+        kap = (EditText) findViewById(R.id.spanTxt);
+        ind = (EditText) findViewById(R.id.kapTxt);
+        ergebnissVerdrosselung = (TextView) findViewById(R.id.verdView);
+        freq = (EditText) findViewById(R.id.freqTxt);
+        calcVerd = new calculateKomp();
+
+        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_verd);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
-        NavigationView navigationView = findViewById(R.id.nav_power);
+        NavigationView navigationView = findViewById(R.id.nav_verd);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
 
@@ -71,40 +75,32 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         });
 
 
-        calcPowerbtn =  findViewById(R.id.powerBtn);
-        blindleistung =  findViewById(R.id.blindTxt);
-        leistung = findViewById(R.id.ctPri);
-        cosphi =  findViewById(R.id.cosphi);
-        zcosphi = findViewById(R.id.zcosphi);
-
-        calcPowr = new calculateKomp();
-
-
-        calcPowerbtn.setOnClickListener(new View.OnClickListener() {
+        calcVerdbtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                if(leistung.getText().toString().length() == 0 || cosphi.getText().toString().length() == 0 || zcosphi.getText().toString().length()== 0 ){
+
+                if(ind.getText().toString().length() == 0 || kap.getText().toString().length() == 0 || freq.getText().toString().length()== 0 ){
 
                     Toast.makeText(getApplicationContext(), "Geben Sie die Werte ein.", Toast.LENGTH_SHORT).show();
 
                 }else {
 
-                    double leistungDouble = Double.parseDouble(leistung.getText().toString());
-                    double cosphiDouble = Double.parseDouble(cosphi.getText().toString());
-                    double zcosDouble = Double.parseDouble(zcosphi.getText().toString());
-                    blindleistung.setText(Double.toString(calcPowr.calcPowr(leistungDouble,cosphiDouble,zcosDouble)));
+                    double indDouble = Double.parseDouble(ind.getText().toString());
+                    double kapDouble = Double.parseDouble(kap.getText().toString());
+                    double freqDouble = Double.parseDouble(freq.getText().toString());
+                    ergebnissVerdrosselung.setText(Double.toString(calcVerd.calcVerd(indDouble,kapDouble,freqDouble)));
                 }
+
             }
         });
 
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         return true;
     }
-
 
     public boolean onNavigationItemSelected(MenuItem item){
 
@@ -116,15 +112,14 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
             Intent home = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(home);
         }
-        else if(id == R.id.action_leistung){
+        else if(id == R.id.action_verdrosselung){
 
             return true;
 
-        }
-        else if(id == R.id.action_verdrosselung){
+        }else if(id == R.id.action_leistung){
 
-            Intent verd = new Intent(getApplicationContext(), calc_verd.class);
-            startActivity(verd);
+            Intent leistung = new Intent(getApplicationContext(), CalcPower.class);
+            startActivity(leistung);
 
         }else if(id == R.id.action_kapazität){
 
@@ -145,6 +140,9 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
             Intent info = new Intent(getApplicationContext(), CalcInfo.class);
             startActivity(info);
         }
+
+
+
         return true;
     }
 
@@ -153,12 +151,11 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-
         if(mToggle.onOptionsItemSelected(item)){
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
+
 
 }
