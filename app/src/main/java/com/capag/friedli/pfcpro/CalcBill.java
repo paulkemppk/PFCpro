@@ -33,7 +33,6 @@ import java.util.Objects;
 
 public class CalcBill extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
     private WebView webb;
     private SwipeRefreshLayout swipe;
     private ViewTreeObserver.OnScrollChangedListener mOnScrollChangedListener;
