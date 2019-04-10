@@ -93,6 +93,10 @@
     <string name="textview_verantwortlich">Rechtliche Hinweise</string>
     <string name="cap_ag_im_wechsel_2_ch_5042_hirschthal">CAP AG\nIm Wechsel 2\nCH-5042 Hirschthal</string>
 
+    <!--calculate toast-->
+    <string name="value_toast">Geben Sie die Werte ein.</string>
+
+
 
 
 </resources>

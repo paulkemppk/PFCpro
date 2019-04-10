@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">CAPAG</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_calc_power">CalcPower</string>
@@ -93,6 +93,8 @@
     <string name="textview_verantwortlich">Legal Details</string>
     <string name="cap_ag_im_wechsel_2_ch_5042_hirschthal">CAP AG\nIm Wechsel 2\nCH-5042 Hirschthal\nSwitzerland</string>
 
+    <!--calculate toast-->
+    <string name="value_toast" tools:ignore="MissingTranslation">Enter the values</string>
 
 
 </resources>

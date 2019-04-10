@@ -85,7 +85,7 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
 
                 if(ctPrim.getText().toString().length() == 0 || ctSek.getText().toString().length() == 0 || kleinste.getText().toString().length()== 0 ){
 
-                    Toast.makeText(getApplicationContext(), "Geben Sie die Werte ein.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "@string/value_toast", Toast.LENGTH_SHORT).show();
 
                 }else {
 
