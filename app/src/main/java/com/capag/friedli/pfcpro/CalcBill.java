@@ -2,10 +2,7 @@ package com.capag.friedli.pfcpro;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -41,18 +38,6 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
     private SwipeRefreshLayout swipe;
     private ViewTreeObserver.OnScrollChangedListener mOnScrollChangedListener;
     private ActionBarDrawerToggle mToggle;
-
-
-    // Kontrolle ob Verbindung zum Internet vorhanden ist
-    /*public static boolean isNetworkStatusAvialable(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (connectivityManager != null) {
-            NetworkInfo netInfos = connectivityManager.getActiveNetworkInfo();
-            if (netInfos != null)
-                return netInfos.isConnected();
-        }
-        return false;
-    }*/
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
