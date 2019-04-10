@@ -29,6 +29,7 @@ import android.view.MenuItem;
 import android.os.Environment;
 import org.w3c.dom.Document;
 
+import java.util.Locale;
 
 
 public class CalcBill extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -85,8 +86,13 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
-                startActivity(browserIntent);
+                if(Locale.getDefault().getLanguage() == "de") {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
+                    startActivity(browserIntent);
+                }else if(Locale.getDefault().getLanguage() == "en"){
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/en/"));
+                    startActivity(browserIntent);
+                }
             }
         });
 
@@ -104,7 +110,15 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
         CookieManager.getInstance().setAcceptCookie(true);
         // Übergabe der Startadresse
 
-        webb.loadUrl("https://www.capag-energy.com/blindleistungskompensation/berechnung/");
+
+        if(Locale.getDefault().getLanguage() == "de") {
+            webb.loadUrl("https://www.capag-energy.com/blindleistungskompensation/berechnung/");
+        }else if(Locale.getDefault().getLanguage() == "en"){
+            webb.loadUrl("https://www.capag-energy.com/power-factor-correction/calculation-tool/");
+        }
+
+
+
         WebSettings webSettings = webb.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.getAllowUniversalAccessFromFileURLs();
