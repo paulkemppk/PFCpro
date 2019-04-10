@@ -81,7 +81,7 @@ public class calc_verd extends AppCompatActivity implements NavigationView.OnNav
 
                 if(ind.getText().toString().length() == 0 || kap.getText().toString().length() == 0 || freq.getText().toString().length()== 0 ){
 
-                    Toast.makeText(getApplicationContext(), "Geben Sie die Werte ein.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.value_toast), Toast.LENGTH_SHORT).show();
 
                 }else {
 

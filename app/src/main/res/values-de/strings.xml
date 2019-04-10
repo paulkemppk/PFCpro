@@ -15,9 +15,9 @@
     <!-- Direktkompensation -->
     <string name="leistung_kw">Leistung [kW]</string>
     <string name="berechnen">Berechnen</string>
-    <string name="cos_phi">cos phi</string>
+    <string name="cos_phi">Cos Phi</string>
     <string name="blindleistung_kvar">Blindleistung [kvar]</string>
-    <string name="ziel_cos_phi">Ziel cos phi</string>
+    <string name="ziel_cos_phi">Ziel Cos Phi</string>
     <string name="berechnung_leistung">Direktkompensation</string>
     <!-- Kapazität -->
     <string name="blindleistungsberechnung_aus_kapazit_t">Blindleistungsberechnung aus Kapazität</string>
@@ -95,6 +95,7 @@
 
     <!--calculate toast-->
     <string name="value_toast">Geben Sie die Werte ein.</string>
+    <string name="power_toast">Geben Sie plausible Werte für den Cos Phi und Ziel Cos Phi ein</string>
 
 
 

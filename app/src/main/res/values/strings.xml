@@ -14,8 +14,8 @@
     <string name="info">Info</string>
     <!-- Direktkompensation -->
     <string name="leistung_kw">Active power [kW]</string>
-    <string name="berechnen">calculate</string>
-    <string name="cos_phi">cos phi</string>
+    <string name="berechnen">Calculate</string>
+    <string name="cos_phi">Cos phi</string>
     <string name="blindleistung_kvar">Reactive power [kvar]</string>
     <string name="ziel_cos_phi">Target cos phi</string>
     <string name="berechnung_leistung">Direct PFC</string>
@@ -40,11 +40,11 @@
     <string name="frequenz_hz_2">Frequency [Hz]</string>
     <!-- C/K-Wert -->
     <string name="berechnung_c_k_wert">Calculation of C/K-Value</string>
-    <string name="stromwandler_pri">Current transformer Pri.</string>
-    <string name="stromwandler_sek">Current transformer Sek.</string>
+    <string name="stromwandler_pri">Current transformer pri.</string>
+    <string name="stromwandler_sek">Current transformer sek.</string>
     <string name="berechnen_4">Calculate</string>
     <string name="c_k_wert_2">C/K-Value</string>
-    <string name="kleinste_stufe_kvar">Smalest Step [kvar]</string>
+    <string name="kleinste_stufe_kvar">Smallest step [kvar]</string>
     <!-- Info -->
     <string name="blindleistungberechnung_info">Info Calculation of power factor correction</string>
     <string name="info_blindstrom">The app is used to calculate various parameters which are required for the design and setting of reactive current compensation.</string>
@@ -95,6 +95,7 @@
 
     <!--calculate toast-->
     <string name="value_toast" tools:ignore="MissingTranslation">Enter the values</string>
+    <string name="power_toast">Enter plausible values for cos phi and target cos phi</string>
 
 
 </resources>

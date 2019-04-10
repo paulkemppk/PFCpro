@@ -1,5 +1,6 @@
 package com.capag.friedli.pfcpro;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -41,8 +42,6 @@ public class calcQ extends AppCompatActivity implements NavigationView.OnNavigat
     private ActionBarDrawerToggle mToggle;
     private Button openHomepage;
     private Button openLinkedIn;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,13 +131,12 @@ public class calcQ extends AppCompatActivity implements NavigationView.OnNavigat
         });
 
         calcKapbtn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             public void onClick(View v) {
-
-
 
                     if (spannung.getText().toString().length() == 0 || kap.getText().toString().length() == 0 || freq.getText().toString().length() == 0 || stDr == 0) {
 
-                        Toast.makeText(getApplicationContext(), "Geben Sie die Werte ein.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.value_toast), Toast.LENGTH_SHORT).show();
 
                     } else {
 
@@ -148,13 +146,11 @@ public class calcQ extends AppCompatActivity implements NavigationView.OnNavigat
                         ergebnissBlind.setText(Double.toString(calcKap.calcKap(kapDouble, freqDouble, spDouble, stDr, ver )));
                     }
 
-
             }
         });
 
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -168,40 +164,25 @@ public class calcQ extends AppCompatActivity implements NavigationView.OnNavigat
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_home) {
-
             Intent home = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(home);
         }
         else if(id == R.id.action_leistung){
-
             Intent verd = new Intent(getApplicationContext(), CalcPower.class);
             startActivity(verd);
-
-
         }
         else if(id == R.id.action_verdrosselung){
-
             Intent verd = new Intent(getApplicationContext(), calc_verd.class);
             startActivity(verd);
-
         }else if(id == R.id.action_ck){
-
             Intent ck = new Intent(getApplicationContext(), CalcCK.class);
             startActivity(ck);
-
         }else if(id == R.id.action_bill){
-
             Intent bill = new Intent(getApplicationContext(), CalcCK.class);
             startActivity(bill);
-
-
         }else if(id == R.id.action_kapazität){
-
-
             return true;
-
         }else if(id == R.id.action_info) {
-
             Intent info = new Intent(getApplicationContext(), CalcInfo.class);
             startActivity(info);
         }

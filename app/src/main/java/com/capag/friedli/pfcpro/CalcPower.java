@@ -1,8 +1,10 @@
 package com.capag.friedli.pfcpro;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,11 +18,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 
 public class CalcPower extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    private Button calcPowerbtn;
     private TextView blindleistung;
     private EditText leistung;
     private EditText cosphi;
@@ -39,7 +42,7 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_power);
+        mDrawerlayout = findViewById(R.id.drawer_power);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav_power);
         navigationView.setNavigationItemSelectedListener(this);
@@ -48,11 +51,11 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         mDrawerlayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        openHomepage = (Button) findViewById(R.id.homepage);
-        openLinkedIn = (Button) findViewById(R.id.linkedin);
+        openHomepage = findViewById(R.id.homepage);
+        openLinkedIn = findViewById(R.id.linkedin);
 
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -71,7 +74,7 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         });
 
 
-        calcPowerbtn =  findViewById(R.id.powerBtn);
+        Button calcPowerbtn = findViewById(R.id.powerBtn);
         blindleistung =  findViewById(R.id.blindTxt);
         leistung = findViewById(R.id.ctPri);
         cosphi =  findViewById(R.id.cosphi);
@@ -81,18 +84,28 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
 
 
         calcPowerbtn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             public void onClick(View v) {
 
                 if(leistung.getText().toString().length() == 0 || cosphi.getText().toString().length() == 0 || zcosphi.getText().toString().length()== 0 ){
 
-                    Toast.makeText(getApplicationContext(), "Geben Sie die Werte ein.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.value_toast), Toast.LENGTH_SHORT).show();
 
                 }else {
 
                     double leistungDouble = Double.parseDouble(leistung.getText().toString());
                     double cosphiDouble = Double.parseDouble(cosphi.getText().toString());
                     double zcosDouble = Double.parseDouble(zcosphi.getText().toString());
-                    blindleistung.setText(Double.toString(calcPowr.calcPowr(leistungDouble,cosphiDouble,zcosDouble)));
+
+                    if(cosphiDouble > 1 || cosphiDouble < 0 || zcosDouble > 1 || zcosDouble < 0){
+
+                        Toast.makeText(getApplicationContext(), getApplicationContext().getString(R.string.power_toast), Toast.LENGTH_SHORT).show();
+
+                    } else {
+
+                        blindleistung.setText(Double.toString(calcPowr.calcPowr(leistungDouble, cosphiDouble, zcosDouble)));
+
+                    }
                 }
             }
         });
@@ -106,7 +119,7 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
     }
 
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         int id = item.getItemId();
 
