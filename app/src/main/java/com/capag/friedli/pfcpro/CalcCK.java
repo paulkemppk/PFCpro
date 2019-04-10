@@ -1,8 +1,10 @@
 package com.capag.friedli.pfcpro;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,20 +18,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 
 public class CalcCK extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
 
-    private Button calcCKbtn;
     private TextView ck;
     private EditText ctPrim;
     private EditText ctSek;
     private EditText kleinste;
-    private calculateKomp calcCK;
-    private DrawerLayout mDrawerlayout;
+    private CalculateKomp calcCK;
     private ActionBarDrawerToggle mToggle;
-    private Button openHomepage;
-    private Button openLinkedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_ck);
+        DrawerLayout mDrawerlayout = findViewById(R.id.drawer_ck);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav_ck);
         navigationView.setNavigationItemSelectedListener(this);
@@ -48,11 +48,11 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
         mToggle.syncState();
 
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        openHomepage = (Button) findViewById(R.id.homepage);
-        openLinkedIn = (Button) findViewById(R.id.linkedin);
+        Button openHomepage = findViewById(R.id.homepage);
+        Button openLinkedIn = findViewById(R.id.linkedin);
 
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -71,16 +71,17 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
         });
 
 
-        calcCKbtn =  findViewById(R.id.ckBtn);
+        Button calcCKbtn = findViewById(R.id.ckBtn);
         ck =  findViewById(R.id.ck);
         ctPrim = findViewById(R.id.ctPri);
         ctSek =  findViewById(R.id.ctSek);
         kleinste = findViewById(R.id.kleinste);
 
-        calcCK = new calculateKomp();
+        calcCK = new CalculateKomp();
 
 
         calcCKbtn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             public void onClick(View v) {
 
                 if(ctPrim.getText().toString().length() == 0 || ctSek.getText().toString().length() == 0 || kleinste.getText().toString().length()== 0 ){
@@ -92,7 +93,14 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
                     int ctPrimInt = Integer.parseInt(ctPrim.getText().toString());
                     int ctSekInt = Integer.parseInt(ctSek.getText().toString());
                     double kleinsteDouble = Double.parseDouble(kleinste.getText().toString());
-                    ck.setText(Double.toString(calcCK.calcCK(ctPrimInt,ctSekInt,kleinsteDouble)));
+
+                    if(ctPrimInt == 0 || ctSekInt == 0){
+
+                        Toast.makeText(getApplicationContext(), "?", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        ck.setText(Double.toString(calcCK.calcCK(ctPrimInt, ctSekInt, kleinsteDouble)));
+                    }
                 }
             }
         });
@@ -106,7 +114,7 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
         return true;
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         int id = item.getItemId();
 
@@ -124,7 +132,7 @@ public class CalcCK extends AppCompatActivity implements NavigationView.OnNaviga
         }
         else if(id == R.id.action_verdrosselung){
 
-            Intent verd = new Intent(getApplicationContext(), calc_verd.class);
+            Intent verd = new Intent(getApplicationContext(), CalcVerd.class);
             startActivity(verd);
 
         }else if(id == R.id.action_kapazität){

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.capag.friedli.pfcpro">
 
 
@@ -10,12 +11,11 @@
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_cap"
         android:label="CAPAG"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        >
+        tools:ignore="AllowBackup">
         <activity
             android:name="com.capag.friedli.pfcpro.MainActivity"
             android:label="CAPAG"
@@ -38,7 +38,7 @@
                 android:value="com.capag.friedli.pfcpro.MainActivity" />
         </activity>
         <activity
-            android:name="com.capag.friedli.pfcpro.calc_verd"
+            android:name="com.capag.friedli.pfcpro.CalcVerd"
             android:label=""
             android:parentActivityName="com.capag.friedli.pfcpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"

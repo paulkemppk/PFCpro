@@ -3,6 +3,7 @@ package com.capag.friedli.pfcpro;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,24 +14,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Objects;
+
 public class CalcInfo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
 
-
-    private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
-    private Button openHomepage;
-    private Button openLinkedIn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_info);
+        DrawerLayout mDrawerlayout = findViewById(R.id.drawer_info);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav_info);
         navigationView.setNavigationItemSelectedListener(this);
@@ -40,11 +39,11 @@ public class CalcInfo extends AppCompatActivity implements NavigationView.OnNavi
         mToggle.syncState();
 
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        openHomepage = (Button) findViewById(R.id.homepage);
-        openLinkedIn = (Button) findViewById(R.id.linkedin);
+        Button openHomepage = findViewById(R.id.homepage);
+        Button openLinkedIn = findViewById(R.id.linkedin);
 
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -70,7 +69,7 @@ public class CalcInfo extends AppCompatActivity implements NavigationView.OnNavi
         return true;
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         int id = item.getItemId();
 
@@ -88,7 +87,7 @@ public class CalcInfo extends AppCompatActivity implements NavigationView.OnNavi
         }
         else if(id == R.id.action_verdrosselung){
 
-            Intent verd = new Intent(getApplicationContext(), calc_verd.class);
+            Intent verd = new Intent(getApplicationContext(), CalcVerd.class);
             startActivity(verd);
 
         }else if(id == R.id.action_kapazität){

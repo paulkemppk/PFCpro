@@ -28,11 +28,8 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
     private EditText leistung;
     private EditText cosphi;
     private EditText zcosphi;
-    private calculateKomp calcPowr;
-    private DrawerLayout mDrawerlayout;
+    private CalculateKomp calcPowr;
     private ActionBarDrawerToggle mToggle;
-    private Button openHomepage;
-    private Button openLinkedIn;
 
 
     @Override
@@ -42,7 +39,7 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = findViewById(R.id.drawer_power);
+        DrawerLayout mDrawerlayout = findViewById(R.id.drawer_power);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav_power);
         navigationView.setNavigationItemSelectedListener(this);
@@ -54,8 +51,8 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        openHomepage = findViewById(R.id.homepage);
-        openLinkedIn = findViewById(R.id.linkedin);
+        Button openHomepage = findViewById(R.id.homepage);
+        Button openLinkedIn = findViewById(R.id.linkedin);
 
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -80,7 +77,7 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         cosphi =  findViewById(R.id.cosphi);
         zcosphi = findViewById(R.id.zcosphi);
 
-        calcPowr = new calculateKomp();
+        calcPowr = new CalculateKomp();
 
 
         calcPowerbtn.setOnClickListener(new View.OnClickListener() {
@@ -136,7 +133,7 @@ public class CalcPower extends AppCompatActivity implements NavigationView.OnNav
         }
         else if(id == R.id.action_verdrosselung){
 
-            Intent verd = new Intent(getApplicationContext(), calc_verd.class);
+            Intent verd = new Intent(getApplicationContext(), CalcVerd.class);
             startActivity(verd);
 
         }else if(id == R.id.action_kapazität){

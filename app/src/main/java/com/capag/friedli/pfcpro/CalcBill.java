@@ -1,5 +1,6 @@
 package com.capag.friedli.pfcpro;
 
+import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -27,47 +29,41 @@ import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.os.Environment;
-import org.w3c.dom.Document;
 
 import java.util.Locale;
+import java.util.Objects;
 
 
 public class CalcBill extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     private WebView webb;
-    private Document document;
     private SwipeRefreshLayout swipe;
     private ViewTreeObserver.OnScrollChangedListener mOnScrollChangedListener;
-    private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
-    private Button openHomepage;
-    private Button openLinkedIn;
-
-
 
 
     // Kontrolle ob Verbindung zum Internet vorhanden ist
-    public static boolean isNetworkStatusAvialable(Context context) {
+    /*public static boolean isNetworkStatusAvialable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null) {
             NetworkInfo netInfos = connectivityManager.getActiveNetworkInfo();
             if (netInfos != null)
-                if (netInfos.isConnected())
-                    return true;
+                return netInfos.isConnected();
         }
         return false;
-    }
+    }*/
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_bill);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_bill);
+        DrawerLayout mDrawerlayout = findViewById(R.id.drawer_bill);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav_bill);
         navigationView.setNavigationItemSelectedListener(this);
@@ -77,19 +73,19 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
         mToggle.syncState();
 
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        openHomepage = (Button) findViewById(R.id.homepage);
-        openLinkedIn = (Button) findViewById(R.id.linkedin);
+        Button openHomepage = findViewById(R.id.homepage);
+        Button openLinkedIn = findViewById(R.id.linkedin);
 
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                if(Locale.getDefault().getLanguage() == "de") {
+                if(Locale.getDefault().getLanguage().equals("de")) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
                     startActivity(browserIntent);
-                }else if(Locale.getDefault().getLanguage() == "en"){
+                }else if(Locale.getDefault().getLanguage().equals("en")){
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/en/"));
                     startActivity(browserIntent);
                 }
@@ -104,20 +100,15 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
             }
         });
 
-
-        webb = (WebView) findViewById(R.id.web1);
+        webb = findViewById(R.id.web1);
         CookieManager.getInstance().setAcceptThirdPartyCookies(webb, true);
         CookieManager.getInstance().setAcceptCookie(true);
-        // Übergabe der Startadresse
 
-
-        if(Locale.getDefault().getLanguage() == "de") {
+        if(Locale.getDefault().getLanguage().equals("de")) {
             webb.loadUrl("https://www.capag-energy.com/blindleistungskompensation/berechnung/");
-        }else if(Locale.getDefault().getLanguage() == "en"){
+        }else if(Locale.getDefault().getLanguage().equals("en")){
             webb.loadUrl("https://www.capag-energy.com/power-factor-correction/calculation-tool/");
         }
-
-
 
         WebSettings webSettings = webb.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -181,6 +172,7 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
                     final String filename = URLUtil.guessFileName(url, contentDisposition, mimetype);
                     request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename);
                     DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+                    assert dm != null;
                     dm.enqueue(request);
                 }
                 catch(SecurityException e)
@@ -195,7 +187,7 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
 
         });
 
-        swipe = (SwipeRefreshLayout) findViewById(R.id.swipe);
+        swipe = findViewById(R.id.swipe);
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -240,18 +232,13 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
-
-    private class MyAppViewClient extends WebViewClient {
-
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         return true;
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         int id = item.getItemId();
 
@@ -269,7 +256,7 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
         }
         else if(id == R.id.action_verdrosselung){
 
-            Intent verd = new Intent(getApplicationContext(), calc_verd.class);
+            Intent verd = new Intent(getApplicationContext(), CalcVerd.class);
             startActivity(verd);
 
         }else if(id == R.id.action_kapazität){

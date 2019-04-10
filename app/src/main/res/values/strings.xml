@@ -94,8 +94,8 @@
     <string name="cap_ag_im_wechsel_2_ch_5042_hirschthal">CAP AG\nIm Wechsel 2\nCH-5042 Hirschthal\nSwitzerland</string>
 
     <!--calculate toast-->
-    <string name="value_toast" tools:ignore="MissingTranslation">Enter the values</string>
-    <string name="power_toast">Enter plausible values for cos phi and target cos phi</string>
+    <string name="value_toast" tools:ignore="MissingTranslation">Please enter the values</string>
+    <string name="power_toast">Please enter plausible values for cos phi and target cos phi</string>
 
 
 </resources>

@@ -1,21 +1,19 @@
 package com.capag.friedli.pfcpro;
 
-import android.widget.Toast;
-
 /**
  * Created by Gonzo on 13.06.2016.
  */
 
-public class calculateKomp {
+class CalculateKomp {
 
 
-    calculateKomp(){
+    CalculateKomp(){
 
     }
 
 
 
-    public double calcVerd(double ind, double kap, double f){
+    double calcVerd(double ind, double kap, double f){
 
 
         double ergebnis = 100*(2*Math.PI*f*(ind*0.001)/(1/(2*Math.PI*f*(kap*0.000001)*3)));
@@ -28,7 +26,7 @@ public class calculateKomp {
     }
 
 
-    public double calcPowr(double leistung, double cosphi, double zcosphi){
+    double calcPowr(double leistung, double cosphi, double zcosphi){
 
         double angle = Math.acos(cosphi);
         double zangle = Math.acos(zcosphi);
@@ -43,7 +41,7 @@ public class calculateKomp {
         return ergebnis2;
     }
 
-    public double calcKap(double kapazität, double frequenz, double spannung, int sterndreieck, int verd){
+    double calcKap(double kapazitaet, double frequenz, double spannung, int sterndreieck, int verd){
 
         double ergebnis3 = 0;
 
@@ -52,16 +50,16 @@ public class calculateKomp {
             switch(verd){
 
                 case 1:
-                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * 3 * (kapazität / 1000000)))/0.95;
+                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * 3 * (kapazitaet / 1000000)))/0.95;
                     break;
                 case 2:
-                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz * 3 * (kapazität / 1000000)))/0.93;
+                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz * 3 * (kapazitaet / 1000000)))/0.93;
                     break;
                 case 3:
-                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * 3 * (kapazität / 1000000)))/0.86;
+                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * 3 * (kapazitaet / 1000000)))/0.86;
                     break;
                 default:
-                    ergebnis3 = Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * 3 * (kapazität / 1000000));
+                    ergebnis3 = Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * 3 * (kapazitaet / 1000000));
                     break;
             }
 
@@ -71,16 +69,16 @@ public class calculateKomp {
             switch(verd){
 
                 case 1:
-                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * (kapazität / 1000000)))/0.95;
+                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * (kapazitaet / 1000000)))/0.95;
                     break;
                 case 2:
-                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz * (kapazität / 1000000)))/0.93;
+                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz * (kapazitaet / 1000000)))/0.93;
                     break;
                 case 3:
-                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * (kapazität / 1000000)))/0.86;
+                    ergebnis3 = (Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * (kapazitaet / 1000000)))/0.86;
                     break;
                 default:
-                    ergebnis3 = Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * (kapazität / 1000000));
+                    ergebnis3 = Math.pow(spannung,2) *( 2 * Math.PI * frequenz  * (kapazitaet / 1000000));
                     break;
 
             }
@@ -95,9 +93,10 @@ public class calculateKomp {
     }
 
 
-    public double calcCK(int ctPrim, int ctSek, double kleinste){
+    @SuppressWarnings("IntegerDivisionInFloatingPointContext")
+    double calcCK(int ctPrim, int ctSek, double kleinste){
 
-        double ck = 0;
+        double ck;
 
         ck = (kleinste*1.44)/(ctPrim/ctSek);
 

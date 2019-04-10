@@ -1,16 +1,11 @@
 package com.capag.friedli.pfcpro;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,36 +13,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
-
-    private Button verdBtn;
-    private Button powerBtn;
-    private Button kapBtn;
-    private Button ckBtn;
-    private Button billBtn;
-    private Button infoBtn;
-    private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
-    private Button openHomepage;
-    private Button openLinkedIn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer);
+        DrawerLayout mDrawerlayout = findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav);
         navigationView.setNavigationItemSelectedListener(this);
@@ -58,18 +39,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mToggle.syncState();
 
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        verdBtn = findViewById(R.id.buttonVerd);
-        powerBtn = findViewById(R.id.buttonPower);
-        kapBtn = findViewById(R.id.buttonKap);
-        ckBtn = findViewById(R.id.buttonCk);
-        billBtn = findViewById(R.id.buttonBill);
-        infoBtn = findViewById(R.id.buttonInfo);
+        Button verdBtn = findViewById(R.id.buttonVerd);
+        Button powerBtn = findViewById(R.id.buttonPower);
+        Button kapBtn = findViewById(R.id.buttonKap);
+        Button ckBtn = findViewById(R.id.buttonCk);
+        Button billBtn = findViewById(R.id.buttonBill);
+        Button infoBtn = findViewById(R.id.buttonInfo);
 
-        openHomepage = (Button) findViewById(R.id.homepage);
-        openLinkedIn = (Button) findViewById(R.id.linkedin);
+        Button openHomepage = findViewById(R.id.homepage);
+        Button openLinkedIn = findViewById(R.id.linkedin);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
@@ -96,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         verdBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent verd = new Intent(getApplicationContext(), calc_verd.class);
+                Intent verd = new Intent(getApplicationContext(), CalcVerd.class);
                 startActivity(verd);
 
             }
@@ -107,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         powerBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-
                 Intent power = new Intent(getApplicationContext(), CalcPower.class);
                 startActivity(power);
 
@@ -116,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         kapBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
 
                 Intent kap= new Intent(getApplicationContext(), calcQ.class);
                 startActivity(kap);
@@ -127,7 +106,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ckBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-
                 Intent ck = new Intent(getApplicationContext(), CalcCK.class);
                 startActivity(ck);
 
@@ -137,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         billBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-
                 Intent bill = new Intent(getApplicationContext(), CalcBill.class);
                 startActivity(bill);
 
@@ -146,7 +123,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         infoBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
 
                 Intent info = new Intent(getApplicationContext(), CalcInfo.class);
                 startActivity(info);
@@ -163,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         int id = item.getItemId();
 
@@ -178,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if(id == R.id.action_verdrosselung){
 
-            Intent verd = new Intent(getApplicationContext(), calc_verd.class);
+            Intent verd = new Intent(getApplicationContext(), CalcVerd.class);
             startActivity(verd);
 
         }else if(id == R.id.action_kapazität){

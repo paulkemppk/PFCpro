@@ -1,8 +1,10 @@
 package com.capag.friedli.pfcpro;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,34 +18,32 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class calc_verd extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.Objects;
 
-    private Button calcVerdbtn;
+public class CalcVerd extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     private TextView ergebnissVerdrosselung;
     private EditText kap;
     private EditText freq;
     private EditText ind;
-    private calculateKomp calcVerd;
-    private DrawerLayout mDrawerlayout;
+    private CalculateKomp calcVerd;
     private ActionBarDrawerToggle mToggle;
-    private Button openHomepage;
-    private Button openLinkedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc_verd);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        calcVerdbtn = (Button) findViewById(R.id.verdBtn);
-        kap = (EditText) findViewById(R.id.spanTxt);
-        ind = (EditText) findViewById(R.id.kapTxt);
-        ergebnissVerdrosselung = (TextView) findViewById(R.id.verdView);
-        freq = (EditText) findViewById(R.id.freqTxt);
-        calcVerd = new calculateKomp();
+        Button calcVerdbtn = findViewById(R.id.verdBtn);
+        kap = findViewById(R.id.spanTxt);
+        ind = findViewById(R.id.kapTxt);
+        ergebnissVerdrosselung = findViewById(R.id.verdView);
+        freq = findViewById(R.id.freqTxt);
+        calcVerd = new CalculateKomp();
 
-        mDrawerlayout = (DrawerLayout) findViewById(R.id.drawer_verd);
+        DrawerLayout mDrawerlayout = findViewById(R.id.drawer_verd);
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout,R.string.open, R.string.close);
         NavigationView navigationView = findViewById(R.id.nav_verd);
         navigationView.setNavigationItemSelectedListener(this);
@@ -52,11 +52,11 @@ public class calc_verd extends AppCompatActivity implements NavigationView.OnNav
         mDrawerlayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        openHomepage = (Button) findViewById(R.id.homepage);
-        openLinkedIn = (Button) findViewById(R.id.linkedin);
+        Button openHomepage = findViewById(R.id.homepage);
+        Button openLinkedIn = findViewById(R.id.linkedin);
 
         openHomepage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -76,6 +76,7 @@ public class calc_verd extends AppCompatActivity implements NavigationView.OnNav
 
 
         calcVerdbtn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             public void onClick(View v) {
 
 
@@ -102,7 +103,7 @@ public class calc_verd extends AppCompatActivity implements NavigationView.OnNav
         return true;
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
         int id = item.getItemId();
 
