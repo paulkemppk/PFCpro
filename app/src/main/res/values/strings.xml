@@ -5,64 +5,64 @@
     <string name="title_activity_calc_verd">calc_verd</string>
     <string name="title_activity_calc_q">calcQ</string>
     <!-- Main -->
-    <string name="blindleistungberechnung">Blindleistungsberechnung</string>
-    <string name="verdrosselungs_frequenz">Verdrosselungs-frequenz</string>
-    <string name="kapazit_t">Kapazität</string>
-    <string name="c_k_wert">C/K-Wert</string>
-    <string name="ew_rechnung">EW-Rechnung</string>
-    <string name="direkt_kompensation">Direkt-kompensation</string>
+    <string name="blindleistungberechnung">Calculation of PFC</string>
+    <string name="verdrosselungs_frequenz">Detuning frequency</string>
+    <string name="kapazit_t">Capacity</string>
+    <string name="c_k_wert">C/K-Value</string>
+    <string name="ew_rechnung">EW-Bill</string>
+    <string name="direkt_kompensation">Direct PFC</string>
     <string name="info">Info</string>
     <!-- Direktkompensation -->
-    <string name="leistung_kw">Leistung [kW]</string>
-    <string name="berechnen">Berechnen</string>
+    <string name="leistung_kw">Active power [kW]</string>
+    <string name="berechnen">calculate</string>
     <string name="cos_phi">cos phi</string>
-    <string name="blindleistung_kvar">Blindleistung [kvar]</string>
-    <string name="ziel_cos_phi">Ziel cos phi</string>
-    <string name="berechnung_leistung">Direktkompensation</string>
+    <string name="blindleistung_kvar">Reactive power [kvar]</string>
+    <string name="ziel_cos_phi">Target cos phi</string>
+    <string name="berechnung_leistung">Direct PFC</string>
     <!-- Kapazität -->
-    <string name="blindleistungsberechnung_aus_kapazit_t">Blindleistungsberechnung aus Kapazität</string>
-    <string name="stern">Stern</string>
-    <string name="spannung_v">Spannung [V]</string>
-    <string name="dreieck">Dreieck</string>
-    <string name="berechnen_2">Berechnen</string>
-    <string name="kapazit_t_uf_2">Kapazität [uF]</string>
-    <string name="frequenz_hz">Frequenz [Hz]</string>
-    <string name="blindleistung_kvar_2">Blindleistung [kvar]</string>
+    <string name="blindleistungsberechnung_aus_kapazit_t">Calculation of reactive power from capacity</string>
+    <string name="stern">Star</string>
+    <string name="spannung_v">Voltage [V]</string>
+    <string name="dreieck">Delta</string>
+    <string name="berechnen_2">Calculate</string>
+    <string name="kapazit_t_uf_2">Capacity [uF]</string>
+    <string name="frequenz_hz">Frequency [Hz]</string>
+    <string name="blindleistung_kvar_2">Reactive power [kvar]</string>
     <string name="_7">7%</string>
     <string name="_5">5%</string>
     <string name="_14">14%</string>
     <!-- Verdrosselung -->
-    <string name="berechnung_des_verdrosselungsfaktors">Berechnung des Verdrosselungsfaktors</string>
-    <string name="berechnen_3">Berechnen</string>
-    <string name="verdrosselung">Verdrosselung [%]</string>
-    <string name="kapazit_t_uf">Kapazität [uF]</string>
-    <string name="induktivit_t_mh">Induktivität [mH]</string>
-    <string name="frequenz_hz_2">Frequenz [Hz]</string>
+    <string name="berechnung_des_verdrosselungsfaktors">Calculation of detuning factor</string>
+    <string name="berechnen_3">Calculate</string>
+    <string name="verdrosselung">Detuning factor [%]</string>
+    <string name="kapazit_t_uf">Capacity [uF]</string>
+    <string name="induktivit_t_mh">Inductivity [mH]</string>
+    <string name="frequenz_hz_2">Frequency [Hz]</string>
     <!-- C/K-Wert -->
-    <string name="berechnung_c_k_wert">Berechnung C/K-Wert</string>
-    <string name="stromwandler_pri">Stromwandler Pri.</string>
-    <string name="stromwandler_sek">Stromwandler Sek.</string>
-    <string name="berechnen_4">Berechnen</string>
-    <string name="c_k_wert_2">C/K Wert</string>
-    <string name="kleinste_stufe_kvar">Kleinste Stufe [kvar]</string>
+    <string name="berechnung_c_k_wert">Calculation of C/K-Value</string>
+    <string name="stromwandler_pri">Current transformer Pri.</string>
+    <string name="stromwandler_sek">Current transformer Sek.</string>
+    <string name="berechnen_4">Calculate</string>
+    <string name="c_k_wert_2">C/K-Value</string>
+    <string name="kleinste_stufe_kvar">Smalest Step [kvar]</string>
     <!-- Info -->
-    <string name="blindleistungberechnung_info">Info Blindleistungsberechnung</string>
-    <string name="info_blindstrom">Die App dient der Berechnung diverser Parameter, welche zur Auslegung und Einstellung einer Blindstromkompensation benötigt werden.</string>
+    <string name="blindleistungberechnung_info">Info Calculation of power factor correction</string>
+    <string name="info_blindstrom">The app is used to calculate various parameters which are required for the design and setting of reactive current compensation.</string>
 
-    <string name="verdrosselungs_frequenz2">"Verdrosselungsfrequenz"</string>
-    <string name="textviewverdrosselung">Berechnung der Verdrosselungsfrequenz aus der Induktivität und der Kapazität.\nKapazität: Kapazität eines Kondensators in uF\nInduktivität: Induktivität der Seriedrossel in mH\nFrequenz: Nennfrequenz der Installation</string>
+    <string name="verdrosselungs_frequenz2">"Detuning frequency"</string>
+    <string name="textviewverdrosselung">Calculation of the detuning frequency from the inductance and the capacitance.\nCapacitance: Capacitance of a capacitor in uF\nInductance: Inductance of the series reactor in mH\nFrequency: Nominal frequency of the installation</string>
 
-    <string name="direkt_kompensation2">Direktkompensation</string>
-    <string name="textviewdirektkompensation">Berechnung der Blindleistung anhand der Wirkleistung und Cos Phi.\nLeistung: Wirkleistung des Verbrauchers gemäss Typenschild in kW\ncos phi: Cos Phi des Verbrauchers gemäss Typenschild\nZiel cos phi: Gewünschter Cos Phi nach Kompensation</string>
+    <string name="direkt_kompensation2">Direct power factor correction</string>
+    <string name="textviewdirektkompensation">Calculation of reactive power based on active power and cos phi.\nPower: active power of the consumer according to nameplate in kW\ncos phi: cos phi of the consumer according to nameplate\nTarget cos phi: Desired cos phi after compensation</string>
 
-    <string name="kapazitaet">Kapazität</string>
-    <string name="textviewkapazitaet">Berechnung der Blindleistung anhand der Kapazität.\nStern/Dreieck: Schaltungsart\n5%,7%,14%: Verdrosselungsfaktor\nSpannung: Nennspannung am Kondensator\nKapazität: Kapazität eines Kondensators\nFrequenz: Nennfrequenz der Installation</string>
+    <string name="kapazitaet">Capacity</string>
+    <string name="textviewkapazitaet">Calculation of reactive power based on capacity.\nstar/delta: circuit type\n5%,7%,14%: Detuning factor\nVoltage: Rated voltage at capacitor\nCapacity: Capacity of a capacitor\nFrequency: Rated frequency of installation</string>
 
-    <string name="c_k_wert3">C/K-Wert</string>
-    <string name="textviewck">Berechnung des C/K-Wertes für die Einstellung der ersten Stufe bei Blindleistungsreglern.\nStromwandler Pri.: Stromwandlerwert auf der Primärseite zB. 1000A\nStromwandler Sek.: Stromwandlerwert auf der Sekundärseite z.B. 5A\nKleinste Stufe: Kleinste Stufe der installierten Kompensation in kvar</string>
+    <string name="c_k_wert3">C/K-Value</string>
+    <string name="textviewck">Calculation of the C/K-Value for setting the first step for reactive power controllers.\nCurrent transformer Pri.: Current transformer value on the primary side e.g. 1000A\nCurrent transformer sec.: Current transformer value on the secondary side e.g. 5A\nSmallest stage: Smallest stage of the installed PFC in kvar</string>
 
-    <string name="ew_rechnung2">EW-Rechnung</string>
-    <string name="textviewew">Berechnung der benötigten Blindleistng anhand der EW-Rechnung</string>
+    <string name="ew_rechnung2">EW-Bill</string>
+    <string name="textviewew">Calculation of the required reactive power using the EW-Bill</string>
 
 
     <string name="verdrosselungsfrequenz">Verdrosselungsfrequenz</string>
@@ -72,26 +72,26 @@
     <string name="info2">Info</string>
     <string name="textviewDirekt">TextView</string>
 
-    <string name="textview_rechtliche_hinweise">1. Haftungsausschluss\nObwohl bei der Zusammenstellung der Informationen dieser Website grösste Sorgfalt angewendet wird, übernimmt CAP AG (Nachfolgend CAP) für die Korrektheit und Vollständigkeit der veröffentlichten Informationen keine Gewähr. Den Website Besuchern wird deshalb geraten, sich für Informationen allenfalls direkt an CAP zu wenden. Haftungsansprüche gegenüber CAP infolge etwaiger Schäden irgendwelcher Art, seien es direkte oder indirekte Schäden, Folgeschäden oder Sonderschäden, die durch die Benutzung oder im Zusammenhang mit der Benutzung auf der Website bereitgestellten Informationen entstehen, sind daher ausgeschlossen, sofern seitens der CAP kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Eingeschlossen in diesem Haftungsausschluss sind unmittelbare sowie durch Virus verursachte Schäden am Computer. Die CAP behält sich ausdrücklich vor, die auf ihrer Website veröffentlichten Informationen ohne vorherige Ankündigung und Haftung zu ändern, ergänzen oder zu löschen.\n2. Urheber-, Marken und andere Immaterialgüterrechte\nVorbehaltlich anders lautenden Angaben stehen sämtliche auf der Website der CAP veröffentlichten Marken, Symbole und Logos im Eigentum von CAP. Deren Nutzung setzt die vorherige ausdrückliche Zustimmung des Eigentümers voraus. Die gesamte Website der CAP ist urheberrechtlich geschützt. Die Inhalte dieser Website dürfen in keiner anderen Weise als zu persönlichen Zwecken gezeigt, kopiert oder anderweitig genutzt werden. Jede andere Wiedergabe, Übertragung und Änderung des Inhalts der CAP Website ist, vorbehaltlich der ausdrücklichen Zustimmung der CAP, verboten.\n3. Verknüpfung mit anderen Websites\nVerknüpfungen von dieser Website mit anderen Websites sind aus Gefälligkeit für den Benutzer zur Verfügung gestellt worden. Die direkt oder indirekt verknüpften Websites liegen ausserhalb des Einflussbereiches der CAP. Die CAP lehnt deshalb die Haftung für die Inhalte der verknüpften Seiten und der in diesen enthaltenen weiteren Verknüpfungen ab. Der Zugriff auf die Website eines Dritten erfolgt auf alleinige Verantwortung des Website Benutzers.\n4. Datenschutz\nIn Übereinstimmung mit dem Schweizerischen Datenschutzgesetz behandelt die CAP die über das Internet zugestellten Daten streng vertraulich. Die der CAP zuteil gewordenen Informationen werden ausschliesslich für die Zwecke verwendet, für welche sie erhoben wurden. Ohne ausdrückliche Zustimmung der betreffenden Personen leitet die CAP keinerlei Personendaten an Dritte weiter.\n5. Gerichtsstand und anwendbares Recht\nAuf die Website der CAP ist Schweizerisches Recht anwendbar. Ausschliesslicher Gerichtsstand ist Aarau in der Schweiz.</string>
+    <string name="textview_rechtliche_hinweise">1. Limitation of liability\nCAP AG (subsequently CAP) uses reasonable care to ensure that the information appearing on this website is up to date and accurate. While CAP takes precautions to prevent the occurrence of error and omissions, the user of this website should not take the accuracy of information for granted but should check directly with CAP. Accordingly, CAP does not accept any liability for any loss or damage which may directly or indirectly result from any advice, opinion, information, representation or omission, whether negligent or otherwise, contained in this site. This includes damages to, or viruses that may infect, your computer equipment. CAP reserves the right to change, modify, suspend or discontinue any aspect of the site without notice and liability.\n2. Intellectual property / Copyrights\nThe trademarks, symbols and logos (the trademarks) used and displayed on this site are the property of CAP unless otherwise indicated. They may not be used without the prior express consent of the trademark owner. The entire content of this website is subject to copyright of CAP. You may display, reproduce and use the information contained in this website only for your personal purposes. Any other reproduction, modification or use of the site’s content is prohibited unless expressly authorized by CAP.\n3. Links to other websites\nThis site may contain links to other websites for the convenience of the users of this site. Note that any linked websites are not under control of CAP. CAP is not responsible for and makes no representations, warranties or conditions concerning the contents of any linked site or any link contained in linked sites.\n4. Data privacy protection\nCAP adheres to the regulations set down by the Swiss Federal Law on the Protection of Data. CAP treats all data obtained via the Internet confidentially. Personal data that has possibly become known by CAP will be kept secret, privacy will be respected and the information will be used exclusively for the purpose for which it was made known to CAP. Without corresponding approval, this data will not be made accessible to third parties, nor transferred to such in any form or manner.\n5. Jurisdiction\nThis website is governed by, and is to be interpreted in accordance with Swiss law. Place of jurisdiction is Aarau in Switzerland.</string>
     <string name="textview_ew_rechnung">Berechnung der Kompensationsleistung anhand der EW-Rechnung.</string>
 
 
     <!-- Menu -->
-    <string name="ew_rechnung_m">EW-Rechnung</string>
-    <string name="c_k_wert_m">C/K-Wert</string>
-    <string name="kapazit_t_m">Kapazität</string>
-    <string name="verdrosselung_m">Verdrosselung</string>
-    <string name="leistung_m">Direktkompensation</string>
+    <string name="ew_rechnung_m">EW-Bill</string>
+    <string name="c_k_wert_m">C/K-Value</string>
+    <string name="kapazit_t_m">Capacity</string>
+    <string name="verdrosselung_m">Detuning factor</string>
+    <string name="leistung_m">Direct PFC</string>
     <string name="home_m">Home</string>
 
     <!-- NavView -->
     <string name="open">open</string>
     <string name="close">close</string>
 
-    <string name="rechtliche_hinweise">Rechtliche Hinweise</string>
-    <string name="verantwortlich_f_r_den_inhalt">Verantwortlich für den Inhalt</string>
-    <string name="textview_verantwortlich">Rechtliche Hinweise</string>
-    <string name="cap_ag_im_wechsel_2_ch_5042_hirschthal">CAP AG\nIm Wechsel 2\nCH-5042 Hirschthal</string>
+    <string name="rechtliche_hinweise">Legal Details</string>
+    <string name="verantwortlich_f_r_den_inhalt">Responsible for the content</string>
+    <string name="textview_verantwortlich">Legal Details</string>
+    <string name="cap_ag_im_wechsel_2_ch_5042_hirschthal">CAP AG\nIm Wechsel 2\nCH-5042 Hirschthal\nSwitzerland</string>
 
 
 
