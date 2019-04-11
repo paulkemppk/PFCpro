@@ -66,14 +66,14 @@
 
 
     <string name="verdrosselungsfrequenz">Verdrosselungsfrequenz</string>
-    <string name="textview">Berechnung der Blindleistung anhand der EW-Rechnung.</string>
+    <string name="textview">Calculation of the required reactive power using the EW-Bill</string>
 
 
     <string name="info2">Info</string>
     <string name="textviewDirekt">TextView</string>
 
     <string name="textview_rechtliche_hinweise">1. Limitation of liability\nCAP AG (subsequently CAP) uses reasonable care to ensure that the information appearing on this website is up to date and accurate. While CAP takes precautions to prevent the occurrence of error and omissions, the user of this website should not take the accuracy of information for granted but should check directly with CAP. Accordingly, CAP does not accept any liability for any loss or damage which may directly or indirectly result from any advice, opinion, information, representation or omission, whether negligent or otherwise, contained in this site. This includes damages to, or viruses that may infect, your computer equipment. CAP reserves the right to change, modify, suspend or discontinue any aspect of the site without notice and liability.\n2. Intellectual property / Copyrights\nThe trademarks, symbols and logos (the trademarks) used and displayed on this site are the property of CAP unless otherwise indicated. They may not be used without the prior express consent of the trademark owner. The entire content of this website is subject to copyright of CAP. You may display, reproduce and use the information contained in this website only for your personal purposes. Any other reproduction, modification or use of the site’s content is prohibited unless expressly authorized by CAP.\n3. Links to other websites\nThis site may contain links to other websites for the convenience of the users of this site. Note that any linked websites are not under control of CAP. CAP is not responsible for and makes no representations, warranties or conditions concerning the contents of any linked site or any link contained in linked sites.\n4. Data privacy protection\nCAP adheres to the regulations set down by the Swiss Federal Law on the Protection of Data. CAP treats all data obtained via the Internet confidentially. Personal data that has possibly become known by CAP will be kept secret, privacy will be respected and the information will be used exclusively for the purpose for which it was made known to CAP. Without corresponding approval, this data will not be made accessible to third parties, nor transferred to such in any form or manner.\n5. Jurisdiction\nThis website is governed by, and is to be interpreted in accordance with Swiss law. Place of jurisdiction is Aarau in Switzerland.</string>
-    <string name="textview_ew_rechnung">Berechnung der Kompensationsleistung anhand der EW-Rechnung.</string>
+    <string name="textview_ew_rechnung">Calculation of the required reactive power using the EW-Bill</string>
 
 
     <!-- Menu -->
