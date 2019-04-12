@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_header">24sp</dimen>
+    <dimen name="text_size_header_2">18sp</dimen>
+    <dimen name="text_size_text">14sp</dimen>
+    <dimen name="grey_bar_height">46sp</dimen>
 </resources>

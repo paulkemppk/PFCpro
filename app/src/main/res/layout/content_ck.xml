@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="@dimen/grey_bar_height"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:visibility="visible"
@@ -29,7 +29,7 @@
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="@dimen/grey_bar_height"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:visibility="visible"
@@ -51,13 +51,13 @@
         android:layout_marginBottom="8dp"
         android:text="@string/stromwandler_pri"
         android:textColor="@color/colorFontGrey"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintVertical_bias="0.175" />
 
     <TextView
         android:id="@+id/textView5"
@@ -69,7 +69,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/stromwandler_sek"
         android:textColor="@color/colorFontGrey"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -88,6 +88,7 @@
         android:background="@drawable/button2"
         android:text="@string/berechnen"
         android:textColor="@android:color/background_light"
+        android:textSize="@dimen/text_size_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +105,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/berechnung_c_k_wert"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size_header"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ctPri"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,6 +129,7 @@
         android:textColor="@color/colorFontGrey"
         android:textColorLink="@color/colorFontGrey"
         android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -150,6 +152,7 @@
         android:textColor="@color/colorFontGrey"
         android:textColorLink="@color/colorFontGrey"
         android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -160,7 +163,7 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="@dimen/grey_bar_height"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:visibility="visible"
@@ -197,7 +200,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/kleinste_stufe_kvar"
         android:textColor="@color/colorFontGrey"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -208,7 +211,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
-        android:layout_height="47dp"
+        android:layout_height="@dimen/grey_bar_height"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:visibility="visible"
@@ -230,7 +233,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/c_k_wert_2"
         android:textColor="@color/colorFontGrey"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.024"
@@ -240,8 +243,8 @@
 
     <TextView
         android:id="@+id/ck"
-        android:layout_width="100dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
@@ -249,14 +252,14 @@
         android:textAlignment="viewEnd"
         android:textColor="@color/colorFontGrey"
         android:textColorLink="@color/colorFontGrey"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size_header_2"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintVertical_bias="0.627" />
 
     <EditText
         android:id="@+id/kleinste"
@@ -273,6 +276,7 @@
         android:textColor="@color/colorFontGrey"
         android:textColorLink="@color/colorFontGrey"
         android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="@dimen/text_size_header_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

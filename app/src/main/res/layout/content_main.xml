@@ -24,7 +24,7 @@
         android:text="@string/blindleistungberechnung"
         android:textColor="@color/colorPrimaryDark"
         android:textColorLink="@color/colorPrimaryDark"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size_header"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,101 +39,107 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="107dp"
-        android:layout_height="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/verdrosselungs_frequenz"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/text_size_text"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCk"
         app:layout_constraintEnd_toEndOf="@+id/buttonVerd"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="@+id/buttonVerd"
         app:layout_constraintTop_toBottomOf="@+id/buttonVerd"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="62dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/kapazit_t"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/text_size_text"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBill"
         app:layout_constraintEnd_toEndOf="@+id/buttonKap"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="@+id/buttonKap"
         app:layout_constraintTop_toBottomOf="@+id/buttonKap"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="73dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/c_k_wert"
         android:textAlignment="center"
+        android:textSize="@dimen/text_size_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonCk"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="@+id/buttonCk"
         app:layout_constraintTop_toBottomOf="@+id/buttonCk"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="69dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/ew_rechnung"
         android:textAlignment="center"
+        android:textSize="@dimen/text_size_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonBill"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="@+id/buttonBill"
         app:layout_constraintTop_toBottomOf="@+id/buttonBill"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="95dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/direkt_kompensation"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_text"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInfo"
         app:layout_constraintEnd_toEndOf="@+id/buttonPower"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="@+id/buttonPower"
         app:layout_constraintTop_toBottomOf="@+id/buttonPower"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="33dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/info"
         android:textAlignment="center"
+        android:textSize="@dimen/text_size_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonInfo"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/buttonInfo"
         app:layout_constraintTop_toBottomOf="@+id/buttonInfo"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <Button
         android:id="@+id/buttonVerd"
@@ -242,7 +248,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.034" />
 
 </android.support.constraint.ConstraintLayout>
