@@ -5,7 +5,7 @@
     <string name="title_activity_calc_verd">calc_verd</string>
     <string name="title_activity_calc_q">calcQ</string>
     <!-- Main -->
-    <string name="blindleistungberechnung">Calculation of PFC</string>
+    <string name="blindleistungberechnung">Calculation of PFC-Unit</string>
     <string name="verdrosselungs_frequenz">Detuning\n frequency</string>
     <string name="kapazit_t">Capacity</string>
     <string name="c_k_wert">C/K-Value</string>
