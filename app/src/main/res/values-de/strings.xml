@@ -35,7 +35,7 @@
     <string name="berechnung_des_verdrosselungsfaktors">Berechnung des Verdrosselungsfaktors</string>
     <string name="berechnen_3">Berechnen</string>
     <string name="verdrosselung">Verdrosselung [%]</string>
-    <string name="kapazit_t_uf">Kapazität [uF]</string>
+    <string name="kapazit_t_uf">Kapazität [uF] (einphasig)</string>
     <string name="induktivit_t_mh">Induktivität [mH]</string>
     <string name="frequenz_hz_2">Frequenz [Hz]</string>
     <!-- C/K-Wert -->

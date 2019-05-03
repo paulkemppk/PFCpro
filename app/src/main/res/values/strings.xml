@@ -35,7 +35,7 @@
     <string name="berechnung_des_verdrosselungsfaktors">Calculation of detuning factor</string>
     <string name="berechnen_3">Calculate</string>
     <string name="verdrosselung">Detuning factor [%]</string>
-    <string name="kapazit_t_uf">Capacity [uF]</string>
+    <string name="kapazit_t_uf">Capacity [uF] (single-phase)</string>
     <string name="induktivit_t_mh">Inductivity [mH]</string>
     <string name="frequenz_hz_2">Frequency [Hz]</string>
     <!-- C/K-Wert -->
