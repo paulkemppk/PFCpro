@@ -101,10 +101,10 @@
         android:textSize="@dimen/text_size_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonBill"
-        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/buttonBill"
         app:layout_constraintTop_toBottomOf="@+id/buttonBill"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/textView13"

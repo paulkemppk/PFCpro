@@ -69,7 +69,7 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
                 if(Locale.getDefault().getLanguage().equals("de")) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/"));
                     startActivity(browserIntent);
-                }else if(Locale.getDefault().getLanguage().equals("en")){
+                }else {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.capag-energy.com/en/"));
                     startActivity(browserIntent);
                 }
@@ -90,7 +90,7 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
 
         if(Locale.getDefault().getLanguage().equals("de")) {
             webb.loadUrl("https://www.capag-energy.com/blindleistungskompensation/berechnung/");
-        }else if(Locale.getDefault().getLanguage().equals("en")){
+        }else {
             webb.loadUrl("https://www.capag-energy.com/power-factor-correction/calculation-tool/");
         }
 

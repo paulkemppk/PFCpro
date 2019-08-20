@@ -23,6 +23,7 @@ import java.util.Objects;
 public class CalcVerd extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView ergebnissVerdrosselung;
+    private TextView ergebnissVerdrosselung2;
     private EditText kap;
     private EditText freq;
     private EditText ind;
@@ -39,7 +40,8 @@ public class CalcVerd extends AppCompatActivity implements NavigationView.OnNavi
         Button calcVerdbtn = findViewById(R.id.verdBtn);
         kap = findViewById(R.id.spanTxt);
         ind = findViewById(R.id.kapTxt);
-        ergebnissVerdrosselung = findViewById(R.id.verdView);
+        ergebnissVerdrosselung = findViewById(R.id.verdView2);
+        ergebnissVerdrosselung2 = findViewById(R.id.verdView);
         freq = findViewById(R.id.freqTxt);
         calcVerd = new CalculateKomp();
 
@@ -90,6 +92,7 @@ public class CalcVerd extends AppCompatActivity implements NavigationView.OnNavi
                     double kapDouble = Double.parseDouble(kap.getText().toString());
                     double freqDouble = Double.parseDouble(freq.getText().toString());
                     ergebnissVerdrosselung.setText(Double.toString(calcVerd.calcVerd(indDouble,kapDouble,freqDouble)));
+                    ergebnissVerdrosselung2.setText(Double.toString(calcVerd.calcVerdinHz(indDouble,kapDouble)));
                 }
 
             }

@@ -9,7 +9,7 @@
     <string name="verdrosselungs_frequenz">Verdrosselungs-\nfaktor</string>
     <string name="kapazit_t">Kapazität</string>
     <string name="c_k_wert">C/K-Wert</string>
-    <string name="ew_rechnung">EW-Rechnung</string>
+    <string name="ew_rechnung">Energierechnung</string>
     <string name="direkt_kompensation">Direkt-\nkompensation</string>
     <string name="info">Info</string>
     <!-- Direktkompensation -->
@@ -35,6 +35,7 @@
     <string name="berechnung_des_verdrosselungsfaktors">Berechnung des Verdrosselungsfaktors</string>
     <string name="berechnen_3">Berechnen</string>
     <string name="verdrosselung">Verdrosselung [%]</string>
+    <string name="verdrosselungHz">Verdrosselung [Hz]</string>
     <string name="kapazit_t_uf">Kapazität [uF] (einphasig)</string>
     <string name="induktivit_t_mh">Induktivität [mH]</string>
     <string name="frequenz_hz_2">Frequenz [Hz]</string>
@@ -69,7 +70,7 @@
     <string name="cap_ag_im_wechsel_2_ch_5042_hirschthal">CAP AG\nIm Wechsel 2\nCH-5042 Hirschthal</string>
 
     <string name="textview_verantwortlich">Rechtliche Hinweise</string>
-    <string name="textview_rechtliche_hinweise" tools:ignore="Typos">1. Haftungsausschluss\nObwohl bei der Zusammenstellung der Informationen dieser Website grösste Sorgfalt angewendet wird, übernimmt CAP AG (Nachfolgend CAP) für die Korrektheit und Vollständigkeit der veröffentlichten Informationen keine Gewähr. Den Website Besuchern wird deshalb geraten, sich für Informationen allenfalls direkt an CAP zu wenden. Haftungsansprüche gegenüber CAP infolge etwaiger Schäden irgendwelcher Art, seien es direkte oder indirekte Schäden, Folgeschäden oder Sonderschäden, die durch die Benutzung oder im Zusammenhang mit der Benutzung auf der Website bereitgestellten Informationen entstehen, sind daher ausgeschlossen, sofern seitens der CAP kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Eingeschlossen in diesem Haftungsausschluss sind unmittelbare sowie durch Virus verursachte Schäden am Computer. Die CAP behält sich ausdrücklich vor, die auf ihrer Website veröffentlichten Informationen ohne vorherige Ankündigung und Haftung zu ändern, ergänzen oder zu löschen.\n2. Urheber-, Marken und andere Immaterialgüterrechte\nVorbehaltlich anders lautenden Angaben stehen sämtliche auf der Website der CAP veröffentlichten Marken, Symbole und Logos im Eigentum von CAP. Deren Nutzung setzt die vorherige ausdrückliche Zustimmung des Eigentümers voraus. Die gesamte Website der CAP ist urheberrechtlich geschützt. Die Inhalte dieser Website dürfen in keiner anderen Weise als zu persönlichen Zwecken gezeigt, kopiert oder anderweitig genutzt werden. Jede andere Wiedergabe, Übertragung und Änderung des Inhalts der CAP Website ist, vorbehaltlich der ausdrücklichen Zustimmung der CAP, verboten.\n3. Verknüpfung mit anderen Websites\nVerknüpfungen von dieser Website mit anderen Websites sind aus Gefälligkeit für den Benutzer zur Verfügung gestellt worden. Die direkt oder indirekt verknüpften Websites liegen ausserhalb des Einflussbereiches der CAP. Die CAP lehnt deshalb die Haftung für die Inhalte der verknüpften Seiten und der in diesen enthaltenen weiteren Verknüpfungen ab. Der Zugriff auf die Website eines Dritten erfolgt auf alleinige Verantwortung des Website Benutzers.\n4. Datenschutz\nIn Übereinstimmung mit dem Schweizerischen Datenschutzgesetz behandelt die CAP die über das Internet zugestellten Daten streng vertraulich. Die der CAP zuteil gewordenen Informationen werden ausschliesslich für die Zwecke verwendet, für welche sie erhoben wurden. Ohne ausdrückliche Zustimmung der betreffenden Personen leitet die CAP keinerlei Personendaten an Dritte weiter.\n5. Gerichtsstand und anwendbares Recht\nAuf die Website der CAP ist Schweizerisches Recht anwendbar. Ausschliesslicher Gerichtsstand ist Aarau in der Schweiz.</string>
+    <string name="textview_rechtliche_hinweise" tools:ignore="Typos">https://www.capag-energy.com/impressum/rechtliches/</string>
 
     <!-- Menu -->
     <string name="ew_rechnung_m">EW-Rechnung</string>
