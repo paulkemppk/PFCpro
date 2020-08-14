@@ -89,9 +89,9 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
         CookieManager.getInstance().setAcceptCookie(true);
 
         if(Locale.getDefault().getLanguage().equals("de")) {
-            webb.loadUrl("https://www.capag-energy.com/blindleistungskompensation/berechnung/");
+            webb.loadUrl("https://www.capag-energy.com/blindleistungskompensation/berechnung");
         }else {
-            webb.loadUrl("https://www.capag-energy.com/power-factor-correction/calculation-tool/");
+            webb.loadUrl("https://www.capag-energy.com/en/power-factor-correction/calculation-tool");
         }
 
         WebSettings webSettings = webb.getSettings();
@@ -107,21 +107,21 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
 
             public void onLoadResource(WebView view, String url) {
                 webb.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByClassName('header-fixed')[0].style.display='none'; " +
+                        "var head = document.getElementsByClassName('navbar navbar-expand-lg')[0].style.display='none'; " +
                         "})()");
 
                 webb.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByClassName('slider-container  page')[0].style.display='none'; " +
+                        "var head = document.getElementsByClassName('breadcrumb')[0].style.display='none'; " +
                         "})()");
 
                 webb.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByClassName('footer-border')[0].style.display='none'; " +
+                        "var head = document.getElementsByClassName('footer d-print-none')[0].style.display='none'; " +
                         "})()");
                 webb.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByClassName('col w-6 services')[0].style.display='none'; " +
+                        "var head = document.getElementsByClassName('headmedien d-print-none')[0].style.display='none'; " +
                         "})()");
                 webb.loadUrl("javascript:(function() { " +
-                        "var head = document.getElementsByClassName('col w-2 service-links')[0].style.display='none'; " +
+                        "var head = document.getElementsByClassName('flexslider-wrap')[0].style.display='none'; " +
                         "})()");
 
 
