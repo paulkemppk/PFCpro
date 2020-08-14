@@ -123,6 +123,12 @@ public class CalcBill extends AppCompatActivity implements NavigationView.OnNavi
                 webb.loadUrl("javascript:(function() { " +
                         "var head = document.getElementsByClassName('flexslider-wrap')[0].style.display='none'; " +
                         "})()");
+                webb.loadUrl("javascript:(function() { " +
+                        "var head = document.getElementsByClassName('container')[0].style.display='none'; " +
+                        "})()");
+                webb.loadUrl("javascript:(function() { " +
+                        "var head = document.getElementsByClassName('logo-wrap')[0].style.display='none'; " +
+                        "})()");
 
 
 
